@@ -1,138 +1,113 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat&display=swap');
 
-html, body{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    background-color: #ebecf1;
+    font-family: 'Karla', sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+.full {
+    max-width: 100%;
+    width: 100vw;
 }
 
 /* Navbar */
 
-#navbar{
-    position: fixed;
-    background-color: #206A5D;
-    width: 100%;
-    height: 5vh;
+nav {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: start;
     align-items: center;
+    height: 50px;
+    position: fixed;
+    background-color: #565759;
 }
 
-#navbar a{
-    margin-left: 50px;
-    padding: 10px;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #ebecf1;
-    font-weight: 700;
-    font-family: 'Karla', sans-serif;
+nav a{
+    text-decoration: none;
+    color: rgb(235, 236, 241);
+
+}
+
+nav li{
+    list-style-type: none;
+    padding: 0 20px 0 20px;
+    
 }
 
 /* Welcome */
 
-#welcome-section{
+#welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    padding-top: 60px;
     height: 100vh;
+    background-color: rgb(235, 236, 241);
 }
 
-#welcome-section h1{
-    font-family: 'Staatliches', sans-serif;
-    letter-spacing: 3px;
-    font-size: 40px;
-}
-
-#welcome-section p{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    color: #206A5D;
-    font-weight: 800;
+@media (max-width: 300px){
+    #welcome-section h1{
+        font-size: 18px;
+    }
 }
 
 /* Projects */
 
-#projects{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    grid-gap: 10px;
-
-    width: 100vw;
-    height: 100vh;
-    background-color: #1f4068;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.project-tile{
-    align-self: center;
-    width: 300px;
-    height: 300px;
-    background-color: #ebecf1;
-}
-
-.project-title{
-    padding: 10px 10px 5px 10px;
-    background-color: #1b1c25;
+#projects {
+    height: auto;
+    background-color: #c0bec6;
     text-align: center;
-    letter-spacing: 1px;
 }
 
-.project-title a{
-    color: white;
-    text-transform: uppercase;
+h2{
+    padding: 50px 0 50px 0;
 }
 
-.project-desc{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+img{
+    display: block;
+    width: 100%;
     padding: 10px;
 }
 
-.project-desc img{
-    padding: 10px;
-}
-
-.project-desc a{
-    margin: 10px;
-    padding: 10px;
-    background-color: #206A5D;
-    font-weight: 700;
-    color: white;
+#projects-grid a{
+    text-decoration: none;
+    color: black;
 }
 
 /* Contact */
 
-#contact{
-    width: 100vw;
-    height: 100vh;
-    background-color: #1b1c25;
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #aaa7b0;
+}
+
+#contacts{
+    font-size: 18px;
+    padding-bottom: 100px;
 }
 
 /* Footer */
 
-footer{
-    width: 100vw;
-    height: 5vh;
-    background-color: #ebecf1;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+#footer {
+    background-color: #565759;
 }
